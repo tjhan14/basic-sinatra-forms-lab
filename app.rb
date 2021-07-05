@@ -6,15 +6,13 @@ class App < Sinatra::Base
         erb :newteam
     end
 
+    get '/team/:id' do
+        redirect_to "/team"
+    end 
+
+
     post '/team' do
         @name = params[:name]
-        @coach = params[:coach]
-        @pg = params[:pg]
-        @sg = params[:sg]
-        @pf = params[:pf]
-        @sf = params[:sf]
-        @c = params[:c]
-        erb :team
     end
 
 end
